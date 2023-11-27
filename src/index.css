@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Mukta-regular";
+    src: url(../src/assets/fonts/Mukta/Mukta-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Mukta-bold";
+    src: url(./assets/fonts/Mukta/Mukta-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Mukta-bolder";
+    src: url(./assets/fonts/Mukta/Mukta-ExtraBold.ttf);
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Mukta-regular",sans-serif;
+}
+
+
+
+p{
+    font-family: "Mukta-regular",sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Mukata-bolder",sans-serif;
+}
