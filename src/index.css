@@ -1,31 +1,38 @@
 @font-face {
-    font-family: "Mukta-regular";
-    src: url(../src/assets/fonts/Mukta/Mukta-Regular.ttf);
+    font-family: "Poppins-regular";
+    src: url(./assets/fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: "Mukta-bold";
-    src: url(./assets/fonts/Mukta/Mukta-Bold.ttf);
+    font-family: "Poppins-bold";
+    src: url(./assets/fonts/Poppins-Bold.ttf);
 }
 
 @font-face {
-    font-family: "Mukta-bolder";
-    src: url(./assets/fonts/Mukta/Mukta-ExtraBold.ttf);
+    font-family: "Poppins-bolder";
+    src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Bebas";
+    src: url(./assets/fonts/BebasNeue-Regular.ttf);
 }
 
 *,::after,::before{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Mukta-regular",sans-serif;
+    font-family: "Poppins-regular",sans-serif;
 }
 
-
-
-p{
-    font-family: "Mukta-regular",sans-serif;
+body{
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-family: "Mukata-bolder",sans-serif;
+    font-family: "Poppins-bolder",sans-serif;
+    color:#fff;
+}
+p{
+    color:#fff;
 }

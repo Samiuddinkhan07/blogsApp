@@ -4,10 +4,21 @@ import authService from './appwrite/auth/auth';
 import { login,logout } from './store/authSlice';
 import './App.css';
 import PageLayout from './components/pageLayout/PageLayout';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
+
+  const router = createBrowserRouter([
+    {
+      path:"/",
+      element:<PageLayout/>,
+      children:[
+
+      ]
+    }
+  ])
 
   useEffect(() =>{
     authService.isUserLogged()
@@ -18,7 +29,7 @@ function App() {
     .finally(() =>  setLoading(false))
   },[])
   return !loading ? (
-    <PageLayout/>
+    <RouterProvider router={router}/>
   ) : (null)
 }
 
