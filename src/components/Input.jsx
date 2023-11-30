@@ -15,7 +15,6 @@ const Input = forwardRef(function Input ({
                 {label}
             </Label>
             <Input type={type} ref={ref} {...props} id={id}>
-
             </Input>
         </FormContainer>
     )
