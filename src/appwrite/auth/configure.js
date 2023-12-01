@@ -2,7 +2,7 @@ import config from "../../config/config";
 import {Client,ID,Databases,Storage,Query, Account} from "appwrite";
 
 
-export class Service{
+export class authService{
     client = new Client();
     databases;
     bucket;
@@ -15,7 +15,7 @@ export class Service{
         this.bucket = new Storage(this.client);
     }
 
-    async createPost({title,slug,content,featuredImg,status,userId}){
+    async createPost({title,slug,content,featuresImg,status,userId}){
         try {
            return  this.databases.createDocument(
                 config.appwriteDbId,
@@ -24,16 +24,16 @@ export class Service{
                 {
                     title,
                     content,
-                    featuredImg,
+                    featuresImg,
                     status,
                 }
             )
         } catch (error) {
-            console.log("App write service create post err",error)
+            console.log("App write authService create post err",error)
         }
     }
 
-    async updatePost(slug,{title,content,featuredImg,status}){
+    async updatePost(slug,{title,content,featuresImg,status}){
         try {
             return await this.databases.updateDocument(
                 config.appwriteDbId,
@@ -41,7 +41,7 @@ export class Service{
                 slug,{
                     title,
                     content,
-                    featuredImg,
+                    featuresImg,
                     status,
                 }
             )
@@ -90,7 +90,7 @@ export class Service{
         }
     }
 
-    // File upload service 
+    // File upload authService 
 
     async uploadFile(file){
         try {
@@ -126,6 +126,6 @@ export class Service{
     }
 }
 
-const Service = new Service();
+const authService = new authService();
 
-export default Service;
+export default authService;
